@@ -12,7 +12,7 @@ ExternalKeyboard.redraw = function(){
             deferred.resolve(result);
         },
         function (error) {
-            deferred.reject(error);
+            deferred.resolve(error);
         },
         pluginName, "redraw", []);
     return deferred.promise();
@@ -26,7 +26,7 @@ ExternalKeyboard.setKeyCommands = function(commands, delimiter){
             deferred.resolve(result);
         },
         function (error) {
-            deferred.reject(error);
+            deferred.resolve(error);
         },
         pluginName, "setKeyCommands", [commands, delimiter]);
     return deferred.promise();
